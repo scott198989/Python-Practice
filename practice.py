@@ -232,3 +232,134 @@
 # user_age_in_seconds()
     
 # print("See ya!")
+
+
+
+                        # Function Parameters
+                        
+# def add(x, y):
+#     result = x + y
+#     print(result)
+# add(5, 3)
+
+
+                        # Adding Arguments  
+# def say_hello(name, surname):
+#     print(f"Hello, {name} {surname}")
+
+# say_hello(surname = "Bob", name = "Smith")
+    
+# def divide(dividend, divisor):
+#     if divisor != 0:
+#         print(dividend / divisor)
+#     else:
+#         print("You fool!")
+        
+# divide(dividend=0, divisor=15)
+
+
+                        # Default parameter values
+                        
+# def add (x=5, y=8):
+#     print(x+y)
+    
+# add(5, 8)
+
+
+                        #  Functions and returning values
+                        
+# def add (x=5, y=8):
+#     print(x +y)
+#     return x + y
+    
+# add(5, 8)
+# result = add(5, 8)
+# print(result)
+
+# def divide(dividend, divisor):
+#     if divisor != 0:
+#         return dividend / divisor
+#     else:
+#         return "You fool!"
+    
+# result = divide(15, 2) * 5
+# print(result)
+    
+
+                        #LAMBDA Functions
+# 4 parts, lambda key word, arguments, semi colon, return value, and can store in a variable 
+
+# add = lambda x, y: x + y
+
+# print(add(5, 7)) 
+
+# def double(x):
+#     return x * 2
+
+# sequence = [1, 3, 5, 9]
+# doubled - [double(x) for x in sequence]
+# doubled = map(double, sequence)
+
+
+                        # Dictionary Comprehensions
+# users = [
+#     (0, "Bob", "password"),
+#     (1, "Rolf", "bob123"),
+#     (2, "Jose", "longp4assword"),
+#     (3, "username", "1234")
+# ]
+
+# username_mapping = {user[1]: user for user in users}
+
+# username_input = input("enter your username: ")
+# password_input = input("Enter your password: ")
+
+# _, username, password = username_mapping[username_input]
+
+# if password_input == password:
+#     print("Your detials are correct.")
+# else:
+#     print("Your details are incorrect.")
+
+
+                            # Unpacking Arguements 
+
+# def multiply(*args):
+#     print(args)
+#     total = 1 
+#     for arg in args:
+#         total = total * args
+#     return total
+    
+# print(multiply(-1))
+
+# def add(x, y):
+#     return x + y
+
+# nums = [3, 5]
+# add(nums)
+
+# def add(x, y):
+#     return x + y
+
+# nums = {"x": 15, "y": 25}
+# print(add(**nums))
+
+# def multiply(*args):
+#     print(args)
+#     total = 1 
+#     for arg in args:
+#         total = total * args
+#     return total
+
+# def apply(*args, operator):
+#     if operator == "*":
+#         return multiply(args)
+#     elif operator == "+":
+#         return sum(args)
+#     else:
+#         return "No valid operator provided to apply."
+    
+    
+#     print(apply(1, 3, 6, 7, operator="*"))
+
