@@ -44,7 +44,9 @@
 # s.add("Smith")
 # print(s)
 
-# SETS
+                
+                
+                # SETS
 
 # friends = {"Bob", "Rolf", "Anne"}
 # abroad = {"Bob", "Anne"}
@@ -65,7 +67,9 @@
 # print(both)
 
 
-# Booleans 
+#           
+# 
+#           Booleans 
 
 # age = input("What is your age?")
 # age = int(age)
@@ -90,7 +94,9 @@
 #     print("Gotta do more Udemy classes!")
 
 
-# The "in" keyword
+#           
+# 
+#           The "in" keyword
 
 # movies_watched = {"The Matrix", "Green Book", "Her"}
 # user_movie = input("Enter something you have watched recently.")
@@ -116,7 +122,9 @@
 #     else:
 #         print("Doh!")
 
-# For Loops
+
+
+#                For Loops
 
 # friends = ["Rolf", "Jen", "Bob", "Anne"]
 
@@ -141,17 +149,63 @@
 # print(friends is starts_s)
 # print("friends: ", id(friends), "starts_s", id(starts_s))
 
-# Dictionaries
+
+
+                # Dictionaries
 
 # friend_ages = {"Rolf": 24, "Adam": 30, "Anne": 27}
 # friend_ages["Bob"] = 20
 # print(friend_ages["Adam"])
 
 
-friends = [
-    {"name": "Rolf", "age": 24},
-    {"name": "Adam", "age": 30},
-    {"name": "Anne", "age": 27}
-]
+# friends = [
+#     {"name": "Rolf", "age": 24},
+#     {"name": "Adam", "age": 30},
+#     {"name": "Anne", "age": 27}
+# ]
 
-print(friends[1]["name"])
+# print(friends[1]["name"])
+
+# student_attendance = {"Rolf": 96, "Bob": 80, "Anne": 100}
+
+# for student, attendance in student_attendance.items():
+#     print(f"{student}: {attendance}")
+    
+# if "Bob" in student_attendance:
+#     print(f"Bob: {student_attendance['Bob']}")
+# else:
+#     print("Bob is not a student in this class")
+    
+# attendance_values = student_attendance.values()
+# print(sum(attendance_values) / len(attendance_values))
+
+                    # Destructuring Variables
+                    
+# t = 5, 11
+
+# x, y = t
+
+# print(x, y)
+
+# student_attendance = {"Rolf": 96, "Bob": 80, "Anne": 100}
+
+# print(list(student_attendance.items()))
+
+# for student, attendance in student_attendance.items():
+#     print(f"{student}: {attendance}")
+
+# people = [("Bob", 42, "Mechanic"), ("James", 24, "Artist"), ("Harry", 32, "Lecturer")]
+
+# for person in people:
+#     print(f"Name: {person[0]}, Age: {person[1]}, Profession {person[2]}")
+
+# person = ("Bob", 42, "Mechanic")
+
+# name, _, profession = person
+
+# print (name, profession)
+
+head, *tail = [ 1, 2, 3, 4, 5]
+
+print(head)
+print(tail)
