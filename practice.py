@@ -205,7 +205,30 @@
 
 # print (name, profession)
 
-head, *tail = [ 1, 2, 3, 4, 5]
+# head, *tail = [ 1, 2, 3, 4, 5]
 
-print(head)
-print(tail)
+# print(head)
+# print(tail)
+
+
+
+                    # functions
+# # Define the function   
+# def hello():
+#     print("Hello")
+    
+# # Call the function
+
+# hello()
+
+# print("Welcome to the age in seconds program!")
+
+# def user_age_in_seconds():
+#     user_age = int(input("Enter your age: "))
+#     age_seconds = user_age * 365 * 24 * 60 * 60
+#     print(f"Your age in seconds is {age_seconds}.")
+    
+    
+# user_age_in_seconds()
+    
+# print("See ya!")
