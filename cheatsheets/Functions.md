@@ -49,6 +49,7 @@ Functions help you to avoid writing the same code multiple times. Plus, if you n
 - Grouping logic that belongs together
 
 Think of a function like a recipe. You put in some ingredients (parameters), follow the steps (code inside the function), and get something delicious out (return value). It's a neat way to pack a bunch of instructions into a single, reusable line or block of code.
+
 ---
 
 ### Function Arguments and Parameters
