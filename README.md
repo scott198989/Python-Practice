@@ -284,3 +284,312 @@ my_set = {item1, item2, item3, ...}
 #### Important Note:
 Since sets don't have any order, they don't support indexing, slicing, or other sequence-like behavior.
 
+### Advanced Set Operations
+
+#### What it is:
+These are a bit more specialized operations you can do with sets, beyond the basics like adding or removing elements.
+
+#### Why you'd use it:
+For handling more complex set manipulation tasks, like getting the symmetric difference between sets or checking if one set is a subset of another.
+
+#### How to use it:
+Here are some advanced methods you can use with sets.
+
+#### Examples:
+1. `symmetric_difference()`:
+    ```python
+    set1 = {1, 2, 3}
+    set2 = {3, 4, 5}
+    print(set1.symmetric_difference(set2))  # Output: {1, 2, 4, 5}
+    ```
+    This gives you a set containing elements that are only in one of the sets, but not both.
+
+2. `issubset()` and `issuperset()`:
+    ```python
+    set1 = {1, 2}
+    set2 = {1, 2, 3, 4, 5}
+    print(set1.issubset(set2))  # Output: True
+    print(set2.issuperset(set1))  # Output: True
+    ```
+    You can check if one set is a subset or superset of another.
+
+3. `update()`:
+    ```python
+    set1 = {1, 2, 3}
+    set2 = {3, 4, 5}
+    set1.update(set2)
+    print(set1)  # Output: {1, 2, 3, 4, 5}
+    ```
+    This updates a set, adding elements from another set (or any other iterable).
+
+4. `intersection_update()`:
+    ```python
+    set1 = {1, 2, 3}
+    set2 = {3, 4, 5}
+    set1.intersection_update(set2)
+    print(set1)  # Output: {3}
+    ```
+    Updates the set, keeping only elements found in both sets.
+
+#### Common Methods:
+- `symmetric_difference()`
+- `issubset()`
+- `issuperset()`
+- `update()`
+- `intersection_update()`
+
+### Booleans
+
+#### What it is:
+Booleans in Python represent one of two values: `True` or `False`.
+
+#### Why you'd use it:
+You'd use booleans to evaluate conditions, such as in if-else statements or loops. They help in making decisions in your code.
+
+#### How to use it:
+It's pretty straightforward, actually. You'll most often see them as the result of a comparison.
+
+#### Examples:
+1. Simple boolean values
+    ```python
+    is_active = True
+    is_inactive = False
+    ```
+
+2. As a result of comparison
+    ```python
+    print(5 > 3)  # Output: True
+    print(5 == 3)  # Output: False
+    ```
+
+3. In an `if` statement
+    ```python
+    is_hungry = True
+    if is_hungry:
+        print("Let's eat!")  # Output: Let's eat!
+    ```
+
+4. Result of functions that return a boolean
+    ```python
+    def is_even(number):
+        return number % 2 == 0
+
+    print(is_even(4))  # Output: True
+    ```
+
+#### Common Use Cases:
+- Decision-making (`if`, `elif`, `else`)
+- Loop conditions (`while`, `for`)
+- To filter or check data
+
+### If Statements
+
+#### What it is:
+The `if` statement is used to test a condition and execute code if the condition is true. You can also add `elif` and `else` blocks to test multiple conditions and execute different code accordingly.
+
+#### Why you'd use it:
+Use `if` statements for decision-making in your code. They help you perform different actions based on different conditions.
+
+#### How to use it:
+The syntax usually goes like this: `if condition: execute_this_code`
+
+#### Examples:
+1. Simple `if` statement
+    ```python
+    age = 25
+    if age >= 21:
+        print("You can drink!")
+    ```
+
+2. `if-else` statement
+    ```python
+    age = 17
+    if age >= 21:
+        print("You can drink!")
+    else:
+        print("Sorry, no drinks for you.")
+    ```
+
+3. `if-elif-else` statement
+    ```python
+    age = 18
+    if age >= 21:
+        print("You can drink and vote!")
+    elif age >= 18:
+        print("You can vote!")
+    else:
+        print("Sorry, you can't do much.")
+    ```
+
+4. Nested `if` statements
+    ```python
+    age = 22
+    if age >= 18:
+        print("You're an adult.")
+        if age >= 21:
+            print("You can also drink!")
+    ```
+
+#### Common Use Cases:
+- Validating user input
+- Checking data before processing it
+- Making game logic decisions, like whether a player wins or loses
+
+### The "In" Keyword
+
+#### What it is:
+The `in` keyword in Python is used to check if a value exists in a sequence (like a list, tuple, or string) or a collection (like a dictionary or set).
+
+#### Why you'd use it:
+You can use it to simplify code that checks for membership, making your code easier to read and maintain.
+
+#### How to use it:
+Simply use it between the item you're checking for and the collection you're checking within. It returns `True` if the item exists, otherwise `False`.
+
+#### Examples:
+
+1. Checking if an element is in a list:
+    ```python
+    fruits = ["apple", "banana", "cherry"]
+    if "apple" in fruits:
+        print("Apple exists!")
+    ```
+
+2. Checking if a key exists in a dictionary:
+    ```python
+    my_dict = {"name": "Scott", "age": 30}
+    if "name" in my_dict:
+        print("Name key exists!")
+    ```
+
+3. Checking if a substring exists in a string:
+    ```python
+    text = "Hello, World!"
+    if "World" in text:
+        print("World is in the text!")
+    ```
+
+4. Using `not in` to check if an item doesn't exist:
+    ```python
+    numbers = [1, 2, 3]
+    if 4 not in numbers:
+        print("4 is not in the list.")
+    ```
+
+#### Common Use Cases:
+- Looking for specific values before processing data
+- Triggering events when certain items are present in collections
+- Conditional filtering of items
+
+### Loops
+
+#### What they are:
+Loops are a way to repeatedly execute a block of code as long as a condition is met. This helps you avoid having to write the same code multiple times.
+
+#### Why you'd use them:
+Loops are great for tasks that are repetitive in nature. For instance, iterating through lists to find specific elements, or running a block of code until a user decides to stop.
+
+#### Types of loops:
+
+1. **For Loops**: Used to iterate over sequences (lists, tuples, dictionaries, sets, strings).
+    ```python
+    for item in [1, 2, 3]:
+        print(item)  # Will print 1, then 2, then 3
+    ```
+
+2. **While Loops**: Run as long as a condition is true.
+    ```python
+    count = 0
+    while count < 5:
+        print(count)  # Will print 0, 1, 2, 3, 4
+        count += 1
+    ```
+
+#### Examples:
+
+1. **Iterating through a list**
+    ```python
+    fruits = ["apple", "banana", "cherry"]
+    for fruit in fruits:
+        print(fruit)
+    ```
+
+2. **Using `break` to exit a loop**
+    ```python
+    for num in [1, 2, 3, 4, 5]:
+        if num == 3:
+            break
+        print(num)  # Will print 1, 2
+    ```
+
+3. **Using `continue` to skip an iteration**
+    ```python
+    for num in [1, 2, 3, 4, 5]:
+        if num == 3:
+            continue
+        print(num)  # Will print 1, 2, 4, 5
+    ```
+
+4. **Using `enumerate` to get index and value**
+    ```python
+    for index, value in enumerate(["apple", "banana", "cherry"]):
+        print(f"Index: {index}, Value: {value}")
+    ```
+
+5. **Nested Loops**
+    ```python
+    for x in [1, 2]:
+        for y in ["a", "b"]:
+            print(f"x: {x}, y: {y}")
+    ```
+
+#### Common Use Cases:
+- Parsing and analyzing data
+- Implementing algorithms
+- Automating repetitive tasks
+
+### List Comprehensions
+
+#### What they are:
+List comprehensions are a concise way to create lists in Python. Think of them as a one-liner that replaces a whole for-loop for list creation.
+
+#### Why you'd use them:
+List comprehensions make your code shorter and often more readable. They're handy when you want to generate a new list by performing some operation on each item in an existing list (or other iterable).
+
+#### Syntax:
+```python
+[expression for item in iterable if condition]
+```
+
+1. **expression**: The value you want in the new list.
+2. **item**: A variable that takes the value of each element in the iterable.
+3. **iterable**: The original list, tuple, string, etc.
+4. **condition**: A filtering condition (optional).
+
+#### Examples:
+
+1. **Create a list of squares**
+    ```python
+    squares = [x*x for x in range(1, 6)]  # Output: [1, 4, 9, 16, 25]
+    ```
+
+2. **Find even numbers in a list**
+    ```python
+    evens = [n for n in range(1, 11) if n % 2 == 0]  # Output: [2, 4, 6, 8, 10]
+    ```
+
+3. **Manipulate strings in a list**
+    ```python
+    upper_fruits = [fruit.upper() for fruit in ["apple", "banana", "cherry"]]  # Output: ['APPLE', 'BANANA', 'CHERRY']
+    ```
+
+4. **Nested List Comprehensions**
+    ```python
+    matrix = [[j for j in range(5)] for i in range(3)]
+    # Output: [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]
+    ```
+
+#### Common Use Cases:
+- Quickly manipulating lists
+- Data transformation
+- Filtering data
