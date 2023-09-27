@@ -40,13 +40,13 @@
 
 # l[0] = "Smith"
 # l.append("Smith2")
-# # l.remove("Smith")
+# l.remove("Smith")
 # s.add("Smith")
 # print(s)
 
                 
                 
-                # SETS
+#                         # SETS
 
 # friends = {"Bob", "Rolf", "Anne"}
 # abroad = {"Bob", "Anne"}
@@ -67,9 +67,8 @@
 # print(both)
 
 
-#           
-# 
-#           Booleans 
+
+#                         # Booleans 
 
 # age = input("What is your age?")
 # age = int(age)
@@ -84,7 +83,9 @@
 #     print("Sorry little buddy, you cant vote, drink or drive. Go watch cartoons or something")
 
 
-# Conditional Statements (if, elif, else)
+
+
+#                 # Conditional Statements (if, elif, else)
 
 # day_of_the_week = input("What day of the week is it?").lower()
 
@@ -94,9 +95,8 @@
 #     print("Gotta do more Udemy classes!")
 
 
-#           
-# 
-#           The "in" keyword
+
+#                         # The "in" keyword
 
 # movies_watched = {"The Matrix", "Green Book", "Her"}
 # user_movie = input("Enter something you have watched recently.")
@@ -105,8 +105,11 @@
 #     print(f"I've watched {user_movie} too!")
 # else:
 #     print("I havent seen that yet, NO SPOILERS!")
+    
+    
+    
 
-# Magic Number Challenge / While loop
+#                     # Magic Number Challenge / While loop
 
 # number = 7
 
@@ -124,7 +127,7 @@
 
 
 
-#                For Loops
+#                         # For Loops
 
 # friends = ["Rolf", "Jen", "Bob", "Anne"]
 
@@ -139,7 +142,10 @@
 #     total += grade
 # print(total/amount)
 
-# Lists comprehension 
+
+
+
+#                         # Lists comprehension 
 
 # friends = ["Rolf", "Sam", "Samantha", "Saurabh", "Jen"]
 # starts_s = [friend for friend in friends if friend.startswith("S")]
@@ -151,7 +157,7 @@
 
 
 
-                # Dictionaries
+#                 # Dictionaries
 
 # friend_ages = {"Rolf": 24, "Adam": 30, "Anne": 27}
 # friend_ages["Bob"] = 20
@@ -179,7 +185,10 @@
 # attendance_values = student_attendance.values()
 # print(sum(attendance_values) / len(attendance_values))
 
-                    # Destructuring Variables
+                    
+                    
+                    
+#                     # Destructuring Variables
                     
 # t = 5, 11
 
@@ -212,7 +221,7 @@
 
 
 
-                    # functions
+#                     # Functions
 # # Define the function   
 # def hello():
 #     print("Hello")
@@ -235,7 +244,7 @@
 
 
 
-                        # Function Parameters
+#                         # Function Parameters
                         
 # def add(x, y):
 #     result = x + y
@@ -243,7 +252,7 @@
 # add(5, 3)
 
 
-                        # Adding Arguments  
+#                         # Adding Arguments  
 # def say_hello(name, surname):
 #     print(f"Hello, {name} {surname}")
 
@@ -258,7 +267,7 @@
 # divide(dividend=0, divisor=15)
 
 
-                        # Default parameter values
+#                         # Default parameter values
                         
 # def add (x=5, y=8):
 #     print(x+y)
@@ -266,7 +275,7 @@
 # add(5, 8)
 
 
-                        #  Functions and returning values
+#                         #  Functions and returning values
                         
 # def add (x=5, y=8):
 #     print(x +y)
@@ -286,8 +295,8 @@
 # print(result)
     
 
-                        #LAMBDA Functions
-# 4 parts, lambda key word, arguments, semi colon, return value, and can store in a variable 
+#                         #LAMBDA Functions
+# # 4 parts, lambda key word, arguments, semi colon, return value, and can store in a variable 
 
 # add = lambda x, y: x + y
 
@@ -301,7 +310,7 @@
 # doubled = map(double, sequence)
 
 
-                        # Dictionary Comprehensions
+#                         # Dictionary Comprehensions
 # users = [
 #     (0, "Bob", "password"),
 #     (1, "Rolf", "bob123"),
@@ -322,7 +331,7 @@
 #     print("Your details are incorrect.")
 
 
-                            # Unpacking Arguements 
+#                             # Unpacking Arguements 
 
 # def multiply(*args):
 #     print(args)
@@ -363,3 +372,92 @@
     
 #     print(apply(1, 3, 6, 7, operator="*"))
 
+#                         #Unpacking keyword arguements 
+                        
+# def named(**kwargs):
+#     print(kwargs)
+    
+# named(name="Bob", age=25)
+
+# def named(**kwargs):
+#     print(kwargs)
+    
+# details = {"name": "Bob", "age": 25}
+
+# named(**details)
+    
+# def named(**kwargs):
+#     print(kwargs)
+    
+# def print_nicely(**kwargs):
+#     named(**kwargs)
+#     for arg, value in kwargs.items():
+#         print(f"{arg}: {value}")
+    
+# print_nicely(name="Bob", age=25)
+
+# def both(*args, **kwargs):
+#     print(args)
+#     print(kwargs)
+    
+# both(1, 3, 5, name="Bob", age=25)
+
+# def post(url, data=None, json=None, **kwargs):
+#     return request('post', url, data=data, json=json, **kwargs)
+
+
+#                 # OOP (Object Oriented Programming)
+                
+# class Student:
+#     def __init__(self, name, grades):
+#         self.name = name
+#         self.grades = grades
+    
+#     def average(self):
+#         return sum(self.grades) / len(self.grades)
+
+# student = Student("Bob", (100, 100, 93, 78, 90))
+# student2 = Student("Rolf", (100, 40, 83, 48, 90))
+# student3 = Student("Lana", (100, 90, 73, 88, 90))
+# student4 = Student("Ashley", (100, 100, 100, 100, 90))
+
+
+# print(student2.name)
+# print(student2.average())
+
+
+#                     # Magic Methods _str_ and _repr_
+                    
+# class Person: 
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+        
+#     def __str__(self):
+#         return f"Person ({self.name}, {self.age}) years old"
+    
+#     def __repr__(self):
+#         return f"Person({self.name}, {self.age})"
+    
+# bob = Person("Bob", 35)
+# print(bob)
+
+                # @class method and @static method
+
+class ClassTest:
+    def instance_method(self):
+        print(f"Called instance method of {self}")
+
+    @classmethod
+    def class_method(cls):
+        print(f"Called class_method of {cls}")
+
+    @staticmethod
+    def static_method():
+        print("Called static method.")
+
+ClassTest.static_method
+ClassTest.class_method()
+test = ClassTest()
+test.instance_method()
+ClassTest.instance_method(test)
